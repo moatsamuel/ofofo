@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Analytics | Asiri</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .stats-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            height: 100%;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .stats-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .stats-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .stats-value {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #fff 0%, #a5a5a5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stats-label {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Logged In Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="ph-fill ph-lock-key brand-icon"></i>
+                Asiri
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="messages.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold text-white" href="stats.html">Stats</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="index.html" class="btn btn-outline-glow btn-sm">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Stats Content -->
+    <section class="container py-5 mt-5">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="fw-bold mb-3">My Analytics</h2>
+                <p class="text-light fs-5">Track your profile activity and message insights.</p>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <!-- Card 1: Visits -->
+            <div class="col-md-4">
+                <div class="stats-card">
+                    <i class="ph-duotone ph-eye stats-icon text-primary"></i>
+                    <div class="stats-value">42</div>
+                    <div class="stats-label">Profile Visits</div>
+                </div>
+            </div>
+
+            <!-- Card 2: Messages -->
+            <div class="col-md-4">
+                <div class="stats-card">
+                    <i class="ph-duotone ph-envelope-open stats-icon" style="color: var(--accent);"></i>
+                    <div class="stats-value">15</div>
+                    <div class="stats-label">Messages Received</div>
+                </div>
+            </div>
+
+            <!-- Card 3: Repeat Senders -->
+            <div class="col-md-4">
+                <div class="stats-card">
+                    <i class="ph-duotone ph-users-three stats-icon text-info"></i>
+                    <div class="stats-value">3</div>
+                    <div class="stats-label">Repeat Senders</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <div class="p-3 border border-secondary rounded d-inline-block"
+                    style="background: rgba(255,255,255,0.02)">
+                    <p class="mb-0 text-muted small">
+                        <i class="ph-fill ph-shield-check me-2 text-success"></i>
+                        Sender IP addresses are analyzed securely to detect repeats but are never revealed to you.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 fixed-bottom" style="background: transparent; border-top: none;">
+        <div class="container text-center">
+            <p class="text-muted small mb-0">&copy; 2024 Asiri App. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
